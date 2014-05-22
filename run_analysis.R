@@ -35,7 +35,8 @@ testX_meanStdDev <- testX[,columnsToSelect]
 #Remove punctuation from feature names
 colnames(testX_meanStdDev) <- str_replace_all(colnames(testX_meanStdDev), "[[:punct:]]", "")
 
-#Read in test activity label data, replace numbers with descripttestY <- read.table("./data/test/Y_test.txt", header = FALSE)
+#Read in test activity label data, replace numbers with descriptive names
+testY <- read.table("./data/test/Y_test.txt", header = FALSE)
 testY_labels <- testY
 
 for(i in 1:nrow(activity_labels)) {
